@@ -1,5 +1,5 @@
 programa
-{	
+{	
 	inclua biblioteca Matematica --> mat
 	
 	funcao inicio()
@@ -195,19 +195,22 @@ programa
 
 		escreva("Calculo de segundos minutos e horas \n\n")
 
-		real segundo
-		real minuto
-		real hora
+		inteiro segundo
+		inteiro minuto
+		inteiro hora
+		inteiro resto
 
 		escreva("Valor em segundo: ")
 		leia(segundo)
 
-		minuto = segundo / 60
-		hora = minuto / 60
+		hora = segundo /3600
+		resto = segundo % 3600
+		minuto = resto / 60
+		segundo = resto % 60
 
 		limpa()
 
-		escreva(mat.arredondar(hora, 2) + ":" + mat.arredondar(minuto, 2) + ":" + segundo)
+		escreva(hora + ":" + minuto + ":" + segundo)
 		
 	}
 }
@@ -216,7 +219,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 323; 
+ * @POSICAO-CURSOR = 3523; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
